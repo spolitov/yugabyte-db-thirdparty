@@ -176,6 +176,8 @@ class Builder(BuilderInterface):
             get_build_def_module('snappy').SnappyDependency(),
             get_build_def_module('crcutil').CRCUtilDependency(),
             get_build_def_module('libcds').LibCDSDependency(),
+            get_build_def_module('abseil').AbseilDependency(),
+            get_build_def_module('tcmalloc').TCMallocDependency(),
 
             get_build_def_module('libuv').LibUvDependency(),
             get_build_def_module('cassandra_cpp_driver').CassandraCppDriverDependency(),
