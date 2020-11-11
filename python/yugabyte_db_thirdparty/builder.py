@@ -304,6 +304,8 @@ class Builder(BuilderInterface):
                 'snappy',
                 'crcutil',
                 'libcds',
+                'abseil',
+                'tcmalloc',
                 'libuv',
                 'cassandra_cpp_driver',
                 'krb5',
