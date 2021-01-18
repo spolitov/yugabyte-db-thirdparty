@@ -171,7 +171,7 @@ class Builder(BuilderInterface):
 
             get_build_def_module('gflags').GFlagsDependency(),
             get_build_def_module('glog').GLogDependency(),
-            get_build_def_module('gperftools').GPerfToolsDependency(),
+            # get_build_def_module('gperftools').GPerfToolsDependency(),
             get_build_def_module('gmock').GMockDependency(),
             get_build_def_module('snappy').SnappyDependency(),
             get_build_def_module('crcutil').CRCUtilDependency(),
