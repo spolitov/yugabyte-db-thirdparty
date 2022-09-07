@@ -19,8 +19,8 @@ class AbseilDependency(Dependency):
     def __init__(self) -> None:
         super(AbseilDependency, self).__init__(
             name='abseil',
-            version='2020_09_23',
-            url_pattern='https://github.com/abseil/abseil-cpp/archive/lts_{0}.zip',
+            version='20220623.1',
+            url_pattern='https://github.com/abseil/abseil-cpp/archive/refs/tags/{0}.tar.gz',
             build_group=BUILD_GROUP_INSTRUMENTED)
         self.copy_sources = False
 
@@ -29,6 +29,6 @@ class AbseilDependency(Dependency):
             self,
             extra_args=['-DCMAKE_BUILD_TYPE=Release',
                         '-DCMAKE_POSITION_INDEPENDENT_CODE=On',
-                        '-DCMAKE_CXX_STANDARD=14',
+                        '-DCMAKE_CXX_STANDARD=20',
                         '-DCMAKE_INSTALL_PREFIX={}'.format(builder.prefix)]
         )

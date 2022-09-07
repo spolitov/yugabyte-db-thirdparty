@@ -19,8 +19,8 @@ class TCMallocDependency(Dependency):
     def __init__(self) -> None:
         super(TCMallocDependency, self).__init__(
             name='tcmalloc',
-            version='2020_09_22',
-            url_pattern='https://github.com/spolitov/tcmalloc/archive/{0}.zip',
+            version='3f80d4dde4dfe7844ece6b307f5dca0ee31ef663',
+            url_pattern='https://github.com/google/tcmalloc/archive/{0}.zip',
             build_group=BUILD_GROUP_INSTRUMENTED)
         self.copy_sources = False
 
@@ -30,7 +30,7 @@ class TCMallocDependency(Dependency):
             extra_args=[
                 '-DCMAKE_BUILD_TYPE=Release',
                 '-DCMAKE_POSITION_INDEPENDENT_CODE=On',
-                '-DCMAKE_CXX_STANDARD=14',
+                '-DCMAKE_CXX_STANDARD=20',
                 '-DCMAKE_INCLUDE_PATH={}/include'.format(builder.prefix),
                 '-DCMAKE_INSTALL_PREFIX={}'.format(builder.prefix)
                             ]
